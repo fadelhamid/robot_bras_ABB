@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_bras_ABB">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.1885E-05 -8.0658E-06 0.043886"
+        rpy="0 0 0" />
+      <mass
+        value="0.9371" />
+      <inertia
+        ixx="0.0014923"
+        ixy="4.3702E-07"
+        ixz="-5.8663E-08"
+        iyy="0.0015259"
+        iyz="3.154E-08"
+        izz="0.0015689" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.0006855 2.4873E-07 -0.049543"
+        rpy="0 0 0" />
+      <mass
+        value="0.43366" />
+      <inertia
+        ixx="0.0013649"
+        ixy="-4.8459E-09"
+        ixz="-5.0338E-06"
+        iyy="0.0010402"
+        iyz="3.0695E-09"
+        izz="0.00069101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0"
+    type="revolute">
+    <origin
+      xyz="1.344E-05 0 0.09335"
+      rpy="3.1416 0 -3.0703" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="300"
+      velocity="5" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.0065011 0.09115 -6.0107E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.5836" />
+      <inertia
+        ixx="0.0040315"
+        ixy="-1.8069E-05"
+        ixz="-6.5492E-07"
+        iyy="0.00054365"
+        iyz="-1.9169E-06"
+        izz="0.0037443" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.38824 0.4 0.85882 0.6" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.12025"
+      rpy="-1.5708 -1.5438 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="5" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.031505 -0.0076076 -0.0013362"
+        rpy="0 0 0" />
+      <mass
+        value="0.22742" />
+      <inertia
+        ixx="7.961E-05"
+        ixy="3.8063E-05"
+        ixz="4.456E-08"
+        iyy="0.00030017"
+        iyz="-3.9345E-09"
+        izz="0.00031316" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 0.2 0"
+      rpy="3.1416 0 -0.031835" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="5" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.021493 0.00011529 0.00025275"
+        rpy="0 0 0" />
+      <mass
+        value="0.050665" />
+      <inertia
+        ixx="1.4625E-05"
+        ixy="-2.0111E-08"
+        ixz="-9.6228E-09"
+        iyy="2.3638E-05"
+        iyz="8.8309E-11"
+        izz="1.813E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0.09947 -0.013523 -0.0018283"
+      rpy="-0.029214 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="5" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.014078 -2.8252E-07 -0.00016271"
+        rpy="0 0 0" />
+      <mass
+        value="0.066258" />
+      <inertia
+        ixx="1.1462E-05"
+        ixy="-1.3613E-10"
+        ixz="-1.0344E-07"
+        iyy="2.8103E-05"
+        iyz="1.2893E-10"
+        izz="2.9288E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0.050588 0 0"
+      rpy="0 0 -1.3526" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="200"
+      velocity="5" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="2.8623E-17 3.2535E-05 0.027023"
+        rpy="0 0 0" />
+      <mass
+        value="0.023325" />
+      <inertia
+        ixx="3.1248E-06"
+        ixy="1.5022E-21"
+        ixz="-1.0505E-22"
+        iyy="5.3622E-06"
+        iyz="-1.9003E-09"
+        izz="5.1614E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0.030728 0 6.7238E-05"
+      rpy="1.5708 1.5592 1.5708" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="200"
+      velocity="5" />
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="-0.12406 -0.0062179 0.004"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035066" />
+      <inertia
+        ixx="7.4038E-08"
+        ixy="-2.1237E-08"
+        ixz="4.0201E-22"
+        iyy="7.9048E-07"
+        iyz="7.4446E-24"
+        izz="8.2711E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="prismatic">
+    <origin
+      xyz="0.0022413 0.0035238 0.1867"
+      rpy="-3.1345 -1.5708 -1.5718" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0.03"
+      effort="100"
+      velocity="5" />
+  </joint>
+  <link
+    name="link_8">
+    <inertial>
+      <origin
+        xyz="-0.12406 -0.0062179 0.004"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035066" />
+      <inertia
+        ixx="7.4038E-08"
+        ixy="-2.1237E-08"
+        ixz="-1.4724E-22"
+        iyy="7.9048E-07"
+        iyz="-2.0266E-23"
+        izz="8.2711E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_bras_ABB/meshes/link_8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint7"
+    type="prismatic">
+    <origin
+      xyz="-0.0022413 -0.0044762 0.1867"
+      rpy="0.072788 -1.5708 -1.6272" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_8" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.03"
+      upper="0"
+      effort="100"
+      velocity="5" />
+  </joint>
+</robot>
